@@ -1,0 +1,3 @@
+Para executar o programa, execute um dos comandos a seguir:
+- python init.py
+- python3 init.py
