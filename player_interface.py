@@ -67,7 +67,7 @@ class PlayerInterface:
                                 relief="solid", image=self.empty)
                 a_label.grid(row=x, column=y, padx=2, pady=2)
                 a_label.bind("<Button-1>", lambda event, line=y+1,
-                             column=x+1: self.click(event, line, column))
+                             column=x+1: self.click(event, line-1, column-1))
                 view_tier.append(a_label)
 
             self.board_view.append(view_tier)
@@ -95,7 +95,7 @@ class PlayerInterface:
     def click(self, event, line, column):
         label = self.board_view[line-1][line-1]
         messagebox.showinfo(title='Casa selecionada!',
-                            message='Casa {} {} selecionada'.format(line, column))
+                            message='Casa {} {} selecionada'.format(column, line))
 
     def select_piece(self, color, number):
         messagebox.showinfo(
